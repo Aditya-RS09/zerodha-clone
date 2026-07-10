@@ -182,8 +182,19 @@ const app = express();
 //     res.send("Positions Done!");
 // });
 
+app.get('/allHoldings', async(req,res)=>{
+  let allHoldings = await HoldingsModel.find({});
+  res.json(allHoldings);
+});
+
+app.get('/allPositions', async(req,res)=>{
+  let allPositions = await PositionsModel.find({});
+  res.json(allPositions);
+});
+
 app.listen(PORT, () => {
   console.log("App stated");
   mongoose.connect(uri);
   console.log("DB Connected!!");
+  
 });
