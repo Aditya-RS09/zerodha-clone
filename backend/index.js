@@ -2,6 +2,9 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyparser =require("body-parser");
+const cors = require("cors")
+
 const {HoldingsModel}=require('./model/HoldingsModels');
 const {PositionsModel}=require('./model/PositionsModel');
 
@@ -9,6 +12,9 @@ const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL || 3002;
 
 const app = express();
+
+app.use(cors());
+app.use(bodyparser.json());
 
 // this down line is used for dummy data to see how it is working
 // we can remove this later, It is temproray

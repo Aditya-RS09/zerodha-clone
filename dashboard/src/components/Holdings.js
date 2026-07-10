@@ -1,18 +1,21 @@
 import React, {useState, useEffect} from "react";
 import  axios from 'axios';
-import { holdings } from "../data/data";
+// import { holdings } from "../data/data";     now after converting holdings to allholdings this is waste
 
 const Holdings = () => {
 
-  const [allHoldings, setAllHoldings]= useState([]);
+  const [allHoldings, setallHoldings]= useState([]);
   useEffect(()=>{
-    axios.get("http://localhost:3002/allPositions").then(())
+    axios.get("http://localhost:3002/allHoldings").then((res)=>{
+      console.log(res.data); //just to see if the data is coming or not 
+      setallHoldings(res.data);
+    });
     
   },[]);
   return (
     <>
       
-        <h3 className="title">Holdings ({holdings.length})</h3>
+        <h3 className="title">Holdings ({allHoldings.length})</h3>
         <div className="order-table">
         <table>
           <thead>
@@ -27,7 +30,7 @@ const Holdings = () => {
               <th>Day chg.</th>
             </tr>
             </thead>
-          {holdings.map((stock,index)=>{
+          {allHoldings.map((stock,index)=>{
             const curValue=stock.price*stock.qty;
             const isProfit=curValue-stock.avg*stock.qty>=0.0;
             const profClass=isProfit ? "profit":"loss";
