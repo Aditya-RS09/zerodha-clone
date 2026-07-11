@@ -27,45 +27,35 @@ const Menu = () => {
           </li>
           </Link>
 
-          <li>
-             <Link style={{textDecoration:"none"}} to="/Orders" onClick={()=>handleMenuClick(1)}>
+          <Link style={{textDecoration:"none"}} to="/Orders" onClick={()=>handleMenuClick(1)}>
           <li>
             <p className={selectedMenu===1 ? activeMenuClass: menuClass}>Orders</p>
           </li>
           </Link>
-          </li>
 
-          <li>
-             <Link style={{textDecoration:"none"}} to="/Holdings" onClick={()=>handleMenuClick(2)}>
+          <Link style={{textDecoration:"none"}} to="/Holdings" onClick={()=>handleMenuClick(2)}>
           <li>
             <p className={selectedMenu===2 ? activeMenuClass: menuClass}>Holdings</p>
           </li>
           </Link>
-          </li>
 
-          <li>
-             <Link style={{textDecoration:"none"}} to="/Positions" onClick={()=>handleMenuClick(3)}>
+          <Link style={{textDecoration:"none"}} to="/Positions" onClick={()=>handleMenuClick(3)}>
           <li>
             <p className={selectedMenu===3 ? activeMenuClass: menuClass}>Positions</p>
           </li>
           </Link>
-          </li>
 
-          <li>
-             <Link style={{textDecoration:"none"}} to="/Funds" onClick={()=>handleMenuClick(4)}>
+          <Link style={{textDecoration:"none"}} to="/Funds" onClick={()=>handleMenuClick(4)}>
           <li>
             <p className={selectedMenu===4 ? activeMenuClass: menuClass}>Funds</p>
           </li>
           </Link>
-          </li>
 
-          <li>
-             <Link style={{textDecoration:"none"}} to="/Apps" onClick={()=>handleMenuClick(5)}>
+          <Link style={{textDecoration:"none"}} to="/Apps" onClick={()=>handleMenuClick(5)}>
           <li>
             <p className={selectedMenu===5 ? activeMenuClass: menuClass}>Apps</p>
           </li>
           </Link>
-          </li>
         </ul>
 
         <hr />

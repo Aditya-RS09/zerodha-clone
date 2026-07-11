@@ -6,29 +6,29 @@ import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
 
-const BuyActionWindow = ({ uid }) => {
-  const { closeBuyWindow } = useContext(GeneralContext);
+const SellActionWindow = ({ uid }) => {
+  const { closeSellWindow } = useContext(GeneralContext);
 
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
-  const handleBuyClick = () => {
+  const handleSellClick = () => {
     axios.post("http://localhost:3002/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
-      mode: "BUY",
+      mode: "SELL",
     });
 
-    closeBuyWindow();
+    closeSellWindow();
   };
 
   const handleCancelClick = () => {
-    closeBuyWindow();
+    closeSellWindow();
   };
 
   return (
-    <div className="container" id="buy-window" draggable="true">
+    <div className="container" id="sell-window" draggable="true">
       <div className="regular-order">
         <div className="inputs">
           <fieldset>
@@ -58,8 +58,8 @@ const BuyActionWindow = ({ uid }) => {
       <div className="buttons">
         <span>Margin required ₹140.65</span>
         <div>
-          <button className="btn btn-blue" onClick={handleBuyClick}>
-            Buy
+          <button className="btn btn-blue" onClick={handleSellClick}>
+            Sell
           </button>
           <button className="btn btn-grey" onClick={handleCancelClick}>
             Cancel
@@ -70,4 +70,4 @@ const BuyActionWindow = ({ uid }) => {
   );
 };
 
-export default BuyActionWindow;
+export default SellActionWindow;

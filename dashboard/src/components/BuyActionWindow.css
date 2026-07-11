@@ -170,6 +170,8 @@
     color: #fff;
     margin-right: 2px;
     margin-left: 2px;
+    border: none;
+    cursor: pointer;
   }
   
   .btn-grey {
@@ -218,4 +220,3 @@
     background: #9b9b9b;
     color: #fff;
   }
-  
