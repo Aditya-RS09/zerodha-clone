@@ -198,6 +198,10 @@ app.get('/allPositions', async(req,res)=>{
   res.json(allPositions);
 });
 
+app.post('/newOrder', async(req,res)=>{
+  
+});
+
 app.listen(PORT, () => {
   console.log("App stated");
   mongoose.connect(uri);
