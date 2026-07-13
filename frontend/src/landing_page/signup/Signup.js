@@ -3,6 +3,7 @@ import React from "react";
 function Signup() {
   return (
     <>
+    <div className="signup-page">
       {/* Hero Section */}
       <div className="container mt-5">
 
@@ -10,19 +11,19 @@ function Signup() {
 
     <div className="col-12">
 
-      <h1
+      <h2
         style={{
-          fontSize: "42px",
+          
           color: "#424242",
           fontWeight: "500",
         }}
       >
         Open a free demat and trading account online
-      </h1>
+      </h2>
 
       <p
         className="text-muted mt-3"
-        style={{ fontSize: "20px" }}
+        
       >
         Start investing brokerage free and join a community of
         1.6+ crore investors and traders.
@@ -51,6 +52,7 @@ function Signup() {
         style={{
           color: "#424242",
           fontWeight: "500",
+          fontSize:"25px",
         }}
       >
         Signup now
@@ -58,7 +60,8 @@ function Signup() {
 
       <p
         className="text-muted mb-4"
-        style={{ fontSize: "18px" }}
+        style={{fontSize:"14px"}}
+       
       >
         Or track your existing application
       </p>
@@ -84,17 +87,19 @@ function Signup() {
       </div>
 
       <button
-        className="btn btn-primary w-100"
-        style={{
-          height: "55px",
-          fontSize: "20px",
-        }}
-      >
-        Get OTP
-      </button>
+  className="btn btn-primary mx-5 "
+  style={{
+    width: "320px",   // Increase this value
+    height: "48px",
+    fontSize: "20px",
+    fontWeight: "500",
+  }}
+>
+  Get OTP
+</button>
 
       <p
-        className="text-muted mt-4"
+        className="text-muted mt-4 mx-5"
         style={{ fontSize: "14px" }}
       >
         By proceeding, you agree to the Zerodha
@@ -109,7 +114,7 @@ function Signup() {
         </a>
       </p>
 
-      <p style={{ fontSize: "14px" }}>
+      <p style={{ fontSize: "14px" }} className="mx-5">
         Looking to open NRI account?
         <a href="" style={{ textDecoration: "none" }}>
           {" "}
@@ -136,7 +141,7 @@ function Signup() {
         style={{
           color: "#424242",
           fontWeight: "500",
-          fontSize: "36px",
+          fontSize: "28px",
         }}
       >
         Investment options with Zerodha demat account
@@ -302,7 +307,7 @@ function Signup() {
 
       {/* ================= Steps Section ================= */}
 
-<div className="container mt-5 mb-5">
+<div className='Container-fluid' style={{backgroundColor: "rgb(247,247,247)" , color:"white", paddingTop: "30px", paddingBottom: "40px"}}>
 
   <div className="row text-center mb-5">
 
@@ -312,7 +317,8 @@ function Signup() {
         style={{
           color: "#424242",
           fontWeight: "500",
-          fontSize: "36px",
+          fontSize: "28px",
+          
         }}
       >
         Steps to open a demat account with Zerodha
@@ -363,14 +369,14 @@ function Signup() {
           01
         </div>
 
-        <h4
+        <h5
           style={{
             color: "#424242",
             marginBottom: "0",
           }}
         >
           Enter the requested details
-        </h4>
+        </h5>
 
       </div>
 
@@ -396,14 +402,14 @@ function Signup() {
           02
         </div>
 
-        <h4
+        <h5
           style={{
             color: "#424242",
             marginBottom: "0",
           }}
         >
           Complete e-sign & verification
-        </h4>
+        </h5>
 
       </div>
 
@@ -429,14 +435,14 @@ function Signup() {
           03
         </div>
 
-        <h4
+        <h5
           style={{
             color: "#424242",
             marginBottom: "0",
           }}
         >
           Start investing!
-        </h4>
+        </h5>
 
       </div>
 
@@ -446,177 +452,7 @@ function Signup() {
 
 </div>
 
-      {/* Benefits Section */}
-
-      {/* ================= Benefits Section ================= */}
-
-<div className="container mt-5 mb-5">
-
-  <div className="row text-center mb-5">
-    <div className="col-12">
-
-      <h2
-        style={{
-          color: "#424242",
-          fontWeight: "500",
-          fontSize: "36px",
-        }}
-      >
-        Benefits of opening a Zerodha demat account
-      </h2>
-
-    </div>
-  </div>
-
-  <div className="row">
-
-    {/* Benefit 1 */}
-
-    <div className="col-lg-4 mb-5 text-center">
-
-      <img
-        src="media/benefit1.svg"
-        alt=""
-        className="img-fluid mb-4"
-        style={{ width: "80px" }}
-      />
-
-      <h4 style={{ color: "#424242" }}>
-        Unbeatable pricing
-      </h4>
-
-      <p
-        className="text-muted"
-        style={{ fontSize: "16px" }}
-      >
-        Zero charges for equity delivery and direct mutual funds.
-      </p>
-
-    </div>
-
-    {/* Benefit 2 */}
-
-    <div className="col-lg-4 mb-5 text-center">
-
-      <img
-        src="media/benefit2.svg"
-        alt=""
-        className="img-fluid mb-4"
-        style={{ width: "80px" }}
-      />
-
-      <h4 style={{ color: "#424242" }}>
-        Best investing experience
-      </h4>
-
-      <p
-        className="text-muted"
-        style={{ fontSize: "16px" }}
-      >
-        Invest in stocks, mutual funds, IPOs, bonds and more from one account.
-      </p>
-
-    </div>
-
-    {/* Benefit 3 */}
-
-    <div className="col-lg-4 mb-5 text-center">
-
-      <img
-        src="media/benefit3.svg"
-        alt=""
-        className="img-fluid mb-4"
-        style={{ width: "80px" }}
-      />
-
-      <h4 style={{ color: "#424242" }}>
-        Easy account opening
-      </h4>
-
-      <p
-        className="text-muted"
-        style={{ fontSize: "16px" }}
-      >
-        Complete the online application in just a few minutes.
-      </p>
-
-    </div>
-
-    {/* Benefit 4 */}
-
-    <div className="col-lg-4 mb-5 text-center">
-
-      <img
-        src="media/benefit4.svg"
-        alt=""
-        className="img-fluid mb-4"
-        style={{ width: "80px" }}
-      />
-
-      <h4 style={{ color: "#424242" }}>
-        Simple & powerful platform
-      </h4>
-
-      <p
-        className="text-muted"
-        style={{ fontSize: "16px" }}
-      >
-        Trade and invest using Zerodha's modern and easy-to-use platform.
-      </p>
-
-    </div>
-
-    {/* Benefit 5 */}
-
-    <div className="col-lg-4 mb-5 text-center">
-
-      <img
-        src="media/benefit5.svg"
-        alt=""
-        className="img-fluid mb-4"
-        style={{ width: "80px" }}
-      />
-
-      <h4 style={{ color: "#424242" }}>
-        Safe & secure
-      </h4>
-
-      <p
-        className="text-muted"
-        style={{ fontSize: "16px" }}
-      >
-        Your investments are protected with industry-standard security.
-      </p>
-
-    </div>
-
-    {/* Benefit 6 */}
-
-    <div className="col-lg-4 mb-5 text-center">
-
-      <img
-        src="media/benefit6.svg"
-        alt=""
-        className="img-fluid mb-4"
-        style={{ width: "80px" }}
-      />
-
-      <h4 style={{ color: "#424242" }}>
-        Trusted by millions
-      </h4>
-
-      <p
-        className="text-muted"
-        style={{ fontSize: "16px" }}
-      >
-        Join more than 1.6 crore investors who trust Zerodha.
-      </p>
-
-    </div>
-
-  </div>
-
-</div>
+  
 
       {/* Account Types Section */}
 
@@ -624,139 +460,128 @@ function Signup() {
 
 <div className="container mt-5 mb-5">
 
-  <div className="row text-center mb-5">
+  <div className="row align-items-center">
 
-    <div className="col-12">
+    {/* Left Image */}
+
+    <div className="col-lg-6 text-center">
+
+      <img
+        src="media/acop-benefits.svg"
+        alt=""
+        className="img-fluid"
+        style={{ width: "85%" }}
+      />
 
       <h2
+        className="mt-5"
         style={{
           color: "#424242",
           fontWeight: "500",
-          fontSize: "36px",
+          fontSize: "13px",
         }}
       >
-        Explore different account types
+        Benefits of opening a Zerodha demat account
       </h2>
 
-      <p
-        className="text-muted mt-3"
-        style={{ fontSize: "18px" }}
-      >
-        Choose the account that best suits your investing needs.
-      </p>
-
     </div>
 
-  </div>
+    {/* Right Content */}
 
-  <div className="row">
+    <div className="col-lg-6">
 
-    {/* Individual Account */}
+      <div className="mb-5">
 
-    <div className="col-lg-3 col-md-6 mb-4">
-
-      <div className="card border-0 shadow-sm h-100 p-4 text-center">
-
-        <img
-          src="media/account1.svg"
-          alt=""
-          className="img-fluid mx-auto mb-4"
-          style={{ width: "80px" }}
-        />
-
-        <h4 style={{ color: "#424242" }}>
-          Individual Account
-        </h4>
+        <h5
+          style={{
+            color: "#424242",
+            fontWeight: "500",
+          }}
+        >
+          Unbeatable pricing
+        </h5>
 
         <p
-          className="text-muted"
-          style={{ fontSize: "15px" }}
+          className="text-muted mt-3"
+          style={{
+            fontSize: "13px",
+            lineHeight: "1.8",
+          }}
         >
-          Invest in stocks, mutual funds, IPOs, ETFs and more with a personal account.
+          Zero charges for equity & mutual fund investments.
+          Flat ₹20 fees for intraday and F&O trades.
         </p>
 
       </div>
 
-    </div>
+      <div className="mb-5">
 
-    {/* HUF Account */}
-
-    <div className="col-lg-3 col-md-6 mb-4">
-
-      <div className="card border-0 shadow-sm h-100 p-4 text-center">
-
-        <img
-          src="media/account2.svg"
-          alt=""
-          className="img-fluid mx-auto mb-4"
-          style={{ width: "80px" }}
-        />
-
-        <h4 style={{ color: "#424242" }}>
-          HUF Account
-        </h4>
+        <h5
+          style={{
+            color: "#424242",
+            fontWeight: "500",
+          }}
+        >
+          Best investing experience
+        </h5>
 
         <p
-          className="text-muted"
-          style={{ fontSize: "15px" }}
+          className="text-muted mt-3"
+          style={{
+            fontSize: "13px",
+            lineHeight: "1.8",
+          }}
         >
-          Manage investments efficiently for your Hindu Undivided Family.
+          Simple and intuitive trading platform with an
+          easy-to-understand user interface.
         </p>
 
       </div>
 
-    </div>
+      <div className="mb-5">
 
-    {/* NRI Account */}
-
-    <div className="col-lg-3 col-md-6 mb-4">
-
-      <div className="card border-0 shadow-sm h-100 p-4 text-center">
-
-        <img
-          src="media/account3.svg"
-          alt=""
-          className="img-fluid mx-auto mb-4"
-          style={{ width: "80px" }}
-        />
-
-        <h4 style={{ color: "#424242" }}>
-          NRI Account
-        </h4>
+        <h5
+          style={{
+            color: "#424242",
+            fontWeight: "500",
+          }}
+        >
+          No spam or gimmicks
+        </h5>
 
         <p
-          className="text-muted"
-          style={{ fontSize: "15px" }}
+          className="text-muted mt-3"
+          style={{
+            fontSize: "13px",
+            lineHeight: "1.8",
+          }}
         >
-          Special trading and demat account designed for Non-Resident Indians.
+          Committed to transparency — no gimmicks,
+          spam, gamification or intrusive notifications.
         </p>
 
       </div>
 
-    </div>
+      <div>
 
-    {/* Minor Account */}
-
-    <div className="col-lg-3 col-md-6 mb-4">
-
-      <div className="card border-0 shadow-sm h-100 p-4 text-center">
-
-        <img
-          src="media/account4.svg"
-          alt=""
-          className="img-fluid mx-auto mb-4"
-          style={{ width: "80px" }}
-        />
-
-        <h4 style={{ color: "#424242" }}>
-          Minor Account
-        </h4>
+        <h5
+          style={{
+            color: "#424242",
+            fontWeight: "500",
+          }}
+        >
+          The Zerodha universe
+        </h5>
 
         <p
-          className="text-muted"
-          style={{ fontSize: "15px" }}
+          className="text-muted mt-3"
+          style={{
+            fontSize: "13px",
+            lineHeight: "1.8",
+          }}
         >
-          Start building wealth early by opening an investment account for minors.
+          More than just an app — gain free access to the
+          entire ecosystem of our partner products.
         </p>
 
       </div>
@@ -781,7 +606,7 @@ function Signup() {
         style={{
           color: "#424242",
           fontWeight: "500",
-          fontSize: "36px",
+          fontSize: "28px",
         }}
       >
         Frequently asked questions
@@ -816,7 +641,7 @@ function Signup() {
         data-bs-parent="#faqAccordion"
       >
 
-        <div className="accordion-body">
+        <div className="accordion-body text-muted" style={{fontSize: "12px"}}>
 
           PAN Card, Aadhaar Card, bank proof, signature and income proof (for F&O).
 
@@ -849,7 +674,7 @@ function Signup() {
         data-bs-parent="#faqAccordion"
       >
 
-        <div className="accordion-body">
+        <div className="accordion-body text-muted" style={{fontSize: "12px"}}>
 
           Online account opening usually takes just a few minutes. Verification may take a little longer.
 
@@ -882,7 +707,7 @@ function Signup() {
         data-bs-parent="#faqAccordion"
       >
 
-        <div className="accordion-body">
+        <div className="accordion-body text-muted" style={{fontSize: "12px"}}>
 
           Equity account opening is free. Charges may apply for commodity accounts.
 
@@ -915,7 +740,7 @@ function Signup() {
         data-bs-parent="#faqAccordion"
       >
 
-        <div className="accordion-body">
+        <div className="accordion-body text-muted" style={{fontSize: "12px"}}>
 
           Yes. The entire account opening process is completely online.
 
@@ -929,8 +754,6 @@ function Signup() {
 
 </div>
 
-{/* ================= Final CTA ================= */}
-
 <div
   className="container text-center mt-5 mb-5"
   style={{ padding: "80px 0" }}
@@ -940,7 +763,7 @@ function Signup() {
     style={{
       color: "#424242",
       fontWeight: "500",
-      fontSize: "38px",
+      fontSize: "34px",
     }}
   >
     Open a Zerodha account
@@ -948,7 +771,7 @@ function Signup() {
 
   <p
     className="text-muted mt-3"
-    style={{ fontSize: "18px" }}
+    style={{ fontSize: "15px" }}
   >
     Modern platforms and apps, ₹0 investments, and flat ₹20 intraday and F&O trades.
   </p>
@@ -966,8 +789,10 @@ function Signup() {
 
 </div>
 
-      {/* Final Signup CTA */}
+     
+      </div>
     </>
+  
   );
 }
 
