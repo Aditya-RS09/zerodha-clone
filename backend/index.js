@@ -1,9 +1,14 @@
 require("dotenv").config();
 
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const { UserModel } = require("./model/UserModel");
+
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyparser =require("body-parser");
 const cors = require("cors")
+
 
 const {HoldingsModel}=require('./model/HoldingsModels');
 const {PositionsModel}=require('./model/PositionsModel');
@@ -209,6 +214,56 @@ app.post('/newOrder', async (req, res) => {
 
   newOrder.save();
   res.send("order saved!"); 
+});
+
+app.post('/signup', async (req, res) => {
+  try {
+    const { username, email, password } = req.body;
+
+    // check if user already exists
+    const existingUser = await UserModel.findOne({ email });
+    if (existingUser) {
+      return res.status(400).send("User already exists with this email.");
+    }
+
+    // hash the password before saving
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newUser = new UserModel({
+      username,
+      email,
+      password: hashedPassword,
+    });
+
+    await newUser.save();
+    res.send("Signup successful!");
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Something went wrong during signup.");
+  }
+});
+
+app.post('/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    const user = await UserModel.findOne({ email });
+    if (!user) {
+      return res.status(400).send("No user found with this email.");
+    }
+
+    const isPasswordCorrect = await bcrypt.compare(password, user.password);
+    if (!isPasswordCorrect) {
+      return res.status(400).send("Incorrect password.");
+    }
+
+    const token = jwt.sign({ id: user._id }, "your_secret_key", { expiresIn: "1d" });
+
+    res.json({ message: "Login successful!", token });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Something went wrong during login.");
+  }
 });
 
 app.listen(PORT, () => {
