@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -42,33 +42,58 @@ function Navbar() {
           <ul className="navbar-nav align-items-center">
 
             <li className="nav-item mx-2">
-              <Link className="nav-link" to="/signup">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active-nav-link" : "nav-link"
+                }
+                to="/signup"
+              >
                 Signup
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item mx-2">
-              <Link className="nav-link" to="/about">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active-nav-link" : "nav-link"
+                }
+                to="/about"
+              >
                 About
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item mx-2">
-              <Link className="nav-link" to="/product">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active-nav-link" : "nav-link"
+                }
+                to="/product"
+              >
                 Product
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item mx-2">
-              <Link className="nav-link" to="/pricing">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active-nav-link" : "nav-link"
+                }
+                to="/pricing"
+              >
                 Pricing
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item mx-2">
-              <Link className="nav-link" to="/support">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active-nav-link" : "nav-link"
+                }
+                to="/support"
+              >
                 Support
-              </Link>
+              </NavLink>
             </li>
 
             <li className="nav-item ms-3">

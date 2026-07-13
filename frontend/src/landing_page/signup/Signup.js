@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const [mobile, setMobile] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const savedMobile = localStorage.getItem("zerodha_user_mobile");
+    if (savedMobile) {
+      window.location.href = `http://localhost:3001?mobile=${savedMobile}`;
+    }
+  }, []);
+
+  const handleGetOtp = () => {
+    if (!/^\d{10}$/.test(mobile)) {
+      alert("Please enter a valid 10-digit mobile number");
+      return;
+    }
+
+    navigate("/otp", { state: { mobile } });
+  };
   return (
     <>
     <div className="signup-page">
@@ -79,17 +98,21 @@ function Signup() {
         </span>
 
         <input
-          type="text"
-          className="form-control"
-          placeholder="Enter your mobile number"
-        />
+  type="tel"
+  className="form-control"
+  placeholder="Enter your mobile number"
+  value={mobile}
+  maxLength="10"
+  onChange={(e) => setMobile(e.target.value.replace(/\D/g, ""))}
+/>
 
       </div>
 
       <button
-  className="btn btn-primary mx-5 "
+  className="btn btn-primary mx-5"
+  onClick={handleGetOtp}
   style={{
-    width: "320px",   // Increase this value
+    width: "320px",
     height: "48px",
     fontSize: "20px",
     fontWeight: "500",
