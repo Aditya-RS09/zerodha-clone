@@ -136,7 +136,7 @@ const WatchListActions = ({ uid }) => {
     generalContext.openBuyWindow(uid);
   };
   const handleSellClick = () => {
-    axios.get("http://localhost:3002/allHoldings").then((res) => {
+    axios.get("https://zerodhabackend.netlify.app/allHoldings").then((res) => {
       const isStockHeld = res.data.some((holding) => holding.name === uid);
 
       if (isStockHeld) {

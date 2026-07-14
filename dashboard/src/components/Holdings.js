@@ -6,7 +6,7 @@ const Holdings = () => {
 
   const [allHoldings, setallHoldings]= useState([]);
   useEffect(()=>{
-    axios.get("http://localhost:3002/allHoldings").then((res)=>{
+    axios.get("https://zerodhabackend.netlify.app/allHoldings").then((res)=>{
       console.log(res.data); //just to see if the data is coming or not 
       setallHoldings(res.data);
     });
