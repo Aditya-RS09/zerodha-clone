@@ -6,11 +6,19 @@ const AuthGuard = ({ children }) => {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const mobileFromUrl = params.get("mobile");
+    const nameFromUrl = params.get("name");
 
     if (mobileFromUrl) {
       // coming fresh from frontend login/signup — save it here
       localStorage.setItem("zerodha_user_mobile", mobileFromUrl);
-      // clean the URL so ?mobile=... doesn't stay visible
+    }
+
+    if (nameFromUrl) {
+      localStorage.setItem("zerodha_user_name", nameFromUrl);
+    }
+
+    if (mobileFromUrl || nameFromUrl) {
+      // clean the URL so ?mobile=...&name=... doesn't stay visible
       window.history.replaceState({}, document.title, "/");
     }
 

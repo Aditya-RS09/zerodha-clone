@@ -7,6 +7,7 @@ function Otp() {
   const navigate = useNavigate();
   const location = useLocation();
   const mobile = location.state?.mobile || "";
+  const name = location.state?.name || "";
 
   useEffect(() => {
     if (secondsLeft <= 0) return;
@@ -35,7 +36,8 @@ function Otp() {
   }
 
   localStorage.setItem("zerodha_user_mobile", mobile);
-  window.location.href = `https://zerodhadashboard-a.netlify.app?mobile=${mobile}`; 
+  localStorage.setItem("zerodha_user_name", name);
+  window.location.href = `https://zerodhadashboard-a.netlify.app?mobile=${mobile}&name=${encodeURIComponent(name)}`;
 };
 
   const handleResend = () => {

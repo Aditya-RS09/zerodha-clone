@@ -2,23 +2,30 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
     const savedMobile = localStorage.getItem("zerodha_user_mobile");
+    const savedName = localStorage.getItem("zerodha_user_name");
     if (savedMobile) {
-      window.location.href = `https://zerodhadashboard-a.netlify.app?mobile=${savedMobile}`;
+      window.location.href = `https://zerodhadashboard-a.netlify.app?mobile=${savedMobile}&name=${encodeURIComponent(savedName || "")}`;
     }
   }, []);
 
   const handleGetOtp = () => {
+    if (!name.trim()) {
+      alert("Please enter your name");
+      return;
+    }
+
     if (!/^\d{10}$/.test(mobile)) {
       alert("Please enter a valid 10-digit mobile number");
       return;
     }
 
-    navigate("/otp", { state: { mobile } });
+    navigate("/otp", { state: { mobile, name } });
   };
   return (
     <>
@@ -84,6 +91,17 @@ function Signup() {
       >
         Or track your existing application
       </p>
+
+      <div className="mb-3" style={{ maxWidth: "430px" }}>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Enter your name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          style={{ height: "55px" }}
+        />
+      </div>
 
       <div
         className="input-group mb-4"
