@@ -266,6 +266,25 @@ app.post('/login', async (req, res) => {
   }
 });
 
-mongoose.connect(uri);
+let isConnected = false;
+
+const connectDB = async () => {
+  if (isConnected) return;
+  await mongoose.connect(uri, {
+    serverSelectionTimeoutMS: 20000,
+  });
+  isConnected = true;
+  console.log("DB Connected!!");
+};
+
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    console.error("DB connection error:", err);
+    res.status(500).send("Database connection failed");
+  }
+});
 
 module.exports = app;
