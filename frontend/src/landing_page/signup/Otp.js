@@ -35,7 +35,7 @@ function Otp() {
   }
 
   localStorage.setItem("zerodha_user_mobile", mobile);
-  window.location.href = `http://localhost:3001?mobile=${mobile}`;
+  window.location.href = `https://zerodhadashboard-a.netlify.app?mobile=${mobile}`; 
 };
 
   const handleResend = () => {

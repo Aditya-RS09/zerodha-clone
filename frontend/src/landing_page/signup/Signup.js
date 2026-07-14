@@ -8,7 +8,7 @@ function Signup() {
   useEffect(() => {
     const savedMobile = localStorage.getItem("zerodha_user_mobile");
     if (savedMobile) {
-      window.location.href = `http://localhost:3001?mobile=${savedMobile}`;
+      window.location.href = `https://zerodhadashboard-a.netlify.app?mobile=${savedMobile}`;
     }
   }, []);
 
