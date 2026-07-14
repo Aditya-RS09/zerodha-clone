@@ -18,7 +18,7 @@ const AuthGuard = ({ children }) => {
 
     if (!savedMobile) {
       // not logged in at all — send back to frontend to sign up/login
-      window.location.href = "http://localhost:3000/signup";
+      window.location.href = "https://zerodhafrontend-a.netlify.app/signup";
       return;
     }
 
