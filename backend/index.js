@@ -266,9 +266,6 @@ app.post('/login', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log("App stated");
-  mongoose.connect(uri);
-  console.log("DB Connected!!");
-  
-});
+mongoose.connect(uri);
+
+module.exports = app;
