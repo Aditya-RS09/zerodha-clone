@@ -1,156 +1,53 @@
-# 📈 Zerodha Clone    THIS IS TILL NOW UPDATED PART AND WE WILL COMPLETE THIS FULL THING SOON....
+# Zerodha Clone
 
-A modern **Zerodha-inspired stock trading platform** built using **React.js** and **Bootstrap 5**. This project recreates the landing page, pricing page, support portal, and a trading dashboard with a clean and responsive UI.
+A full-stack **Zerodha-inspired stock trading platform** built with **React.js**, **Node.js/Express**, and **MongoDB**. The project recreates Zerodha's landing page, signup/login flow, and a live trading dashboard (holdings, positions, orders, watchlist) with a clean, responsive UI.
 
----
-
-## 🚀 Live Features
-
-### 🌐 Landing Page
-- 🏠 Home Page
-- 📊 Products Page
-- 💰 Pricing Page
-- 👨‍💼 About Page
-- 🆘 Support Page
-- 📝 Signup Page
-
-### 📊 Dashboard
-- 📈 Watchlist
-- 📉 Holdings
-- 💹 Positions
-- 💰 Funds
-- 📋 Orders
-- 📦 Portfolio Overview
+> This project is built for educational and learning purposes only and is inspired by the Zerodha platform. It is not affiliated with Zerodha in any way.
 
 ---
 
-## 🛠️ Tech Stack
+## Live Demo
 
-- ⚛️ React.js
-- 🎨 Bootstrap 5
-- 🧩 JavaScript (ES6)
-- 🌐 HTML5
-- 🎯 CSS3
-- 🖼️ Font Awesome
-- ⚡ React Router DOM
+| Service | Link |
+|---|---|
+| Frontend (Landing + Signup) | https://zerodhafrontend-a.netlify.app |
+| Dashboard | https://zerodhadashboard-a.netlify.app |
+| Backend API | https://zerodhabackend.netlify.app |
 
 ---
 
-## 📂 Project Structure
+## How to Log In (Demo Mode)
 
-```
-Zerodha_Dummy/
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── landing_page/
-│   │   │   ├── home/
-│   │   │   ├── about/
-│   │   │   ├── pricing/
-│   │   │   ├── products/
-│   │   │   ├── support/
-│   │   │   └── signup/
-│   │   ├── Navbar.js
-│   │   ├── Footer.js
-│   │   └── index.js
-│
-├── dashboard/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── index.js
-│
-└── backend/
-```
+This project uses a simulated OTP flow for demo purposes — no real SMS is sent.
+
+1. Go to the [signup page](https://zerodhafrontend-a.netlify.app/signup)
+2. Enter your name and a 10-digit mobile number
+3. Click **Get OTP**
+4. On the OTP screen, enter the hardcoded OTP: **`123456`**
+5. Click **Continue** — you'll be redirected to the live dashboard, logged in under your name
+
+You can log out anytime from the profile icon in the top-right corner of the dashboard.
 
 ---
 
-## 📸 Screens
+## Features
 
-- ✅ Landing Page
-- ✅ Products
-- ✅ Pricing
-- ✅ About
-- ✅ Support Portal
-- ✅ Dashboard
+**Landing Page**
+- Home, Products, Pricing, About, Support, and Signup pages
 
----
-
-## 📦 Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/Aditya-RS09/zerodha-clone.git
-```
-
-Go into the project
-
-```bash
-cd zerodha-clone
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Run the project
-
-```bash
-npm start
-```
+**Dashboard**
+- Watchlist, Holdings, Positions, Funds, Orders, and portfolio overview
+- Persisted login session (name + mobile remembered across visits)
+- Profile dropdown with logout
 
 ---
 
-## ✨ Future Improvements
+## Tech Stack
 
-- 🔐 User Authentication
-- 💳 Payment Integration
-- 📈 Live Stock Market API
-- 📊 Real-Time Charts
-- 💬 Notifications
-- 🌙 Dark Mode
-- 📱 Better Mobile Responsiveness
+**Frontend & Dashboard:** React.js, React Router DOM, Bootstrap 5, JavaScript (ES6), HTML5, CSS3
+**Backend:** Node.js, Express.js, MongoDB (Atlas)
+**Deployment:** Netlify (including serverless functions for the backend API)
 
 ---
 
-## 📚 Learning Objectives
-
-This project helped me learn:
-
-- React Components
-- React Router
-- Bootstrap Grid System
-- Responsive Design
-- Component Reusability
-- Project Folder Structure
-- Git & GitHub Workflow
-
----
-
-## 👨‍💻 Author
-
-**Aditya Tiwari**
-
-- 🎓 B.Tech CSE Student
-- 💻 Passionate about Full Stack Development
-- 🚀 Currently building real-world React projects
-
-GitHub:
-https://github.com/Aditya-RS09
-
----
-
-## ⭐ Support
-
-If you like this project, consider giving it a ⭐ on GitHub.
-
-It motivates me to build more amazing projects!
-
----
-
-> **This project is built only for educational and learning purposes and is inspired by the Zerodha platform. It is not affiliated with Zerodha in any way.**
+## Project Structure
